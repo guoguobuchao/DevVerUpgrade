@@ -43,15 +43,6 @@ def upgrade(device,target_build,partition=0):
 
     client.close()
 
-def show(device):
-    client = Paramiko_cient(device, 'config.ini')
 
-    status = client.connect()
-    i =0
-    while i<200:
-        print i
-        client.run("show ap database")
-        time.sleep(5)
-        i += 1
 
 
